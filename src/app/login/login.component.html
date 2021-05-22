@@ -1,0 +1,32 @@
+<div class="page-area">
+  <button  class="btn btn-primary active">Sign Up</button>
+  <button  class="btn btn btn-primary">Login</button>
+  
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text .</p>
+  <div class="row justify-content-center">
+    <div class="col-md-4 bg-white text-left py-3 rounded-shadow">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name"><b>Username</b></label>
+      <input type="text" class="form-control"  placeholder="Enter name" formControlName="username">
+      
+    </div><br>
+
+    <div class="form-group">
+      <label for="Email"><b>Email address</b></label>
+      <input type="email" class="form-control"  placeholder="Enter email" formControlName="email"> 
+      <!-- <span *ngIf="email.invalid && email.touched" class="error">Email is not valid</span>  -->
+      <small class="text-danger" *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched">
+        Please Enter Valid Email</small>
+    </div><br>
+    <!-- <div class="form-group">
+      <label for="Password"><b>Password</b></label>
+      <input type="password" class="form-control" placeholder="Password" formControlName="password">
+    </div><br> -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">Submit</button>
+  </form>
+</div>
+</div>
+</div>

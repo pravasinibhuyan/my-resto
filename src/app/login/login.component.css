@@ -1,0 +1,21 @@
+.page-area
+{
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 400px;
+    text-align: center;
+    background-color:#f7f7f7;
+}
+input.ng-touched.ng-invalid
+{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgba(255, 0,0, 0.2);
+}
+.btn
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
